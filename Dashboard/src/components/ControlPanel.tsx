@@ -36,7 +36,7 @@ export default function ControlPanel() {
         // Obtiene el índice de la variable seleccionada
         const idx = parseInt(event.target.value);
         setSelected(idx);  // Actualiza el estado con el índice seleccionado
-        if (descriptionRef.current) {
+        if (descriptionRef.current !== null) {
             descriptionRef.current.innerHTML = (idx >= 0) ? items[idx].description : "";
         }
     };
